@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+	  <StartupObject>FirstProject.Basic.Class1</StartupObject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Loop\pattern.cs" />
+  </ItemGroup>
+
+</Project>
