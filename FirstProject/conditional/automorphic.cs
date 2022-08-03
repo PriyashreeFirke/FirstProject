@@ -10,7 +10,7 @@ namespace FirstProject.conditional
         {
             Console.WriteLine("enter number");
             int n = int.Parse(Console.ReadLine());
-            int sq = n * n;
+            int sq = n * n *n;// trimorphic for automorphic n*n
             int c = 1;
             while (n > 0)
             {

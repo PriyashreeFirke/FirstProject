@@ -26,7 +26,7 @@ namespace FirstProject.conditional
             Console.WriteLine("total" + total);
             percentage = (total * 100) / 500;
             Console.WriteLine("percentage" + percentage);
-            average = maths + art + History + science + Hindi / 2;
+            average = maths + art + History + science + Hindi / 5;
             Console.WriteLine("average" + average);
             if (percentage > 70)
             {

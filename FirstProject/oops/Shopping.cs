@@ -6,36 +6,47 @@ namespace FirstProject.oops
 {
     class Shopping
     {
-        public string item;
-        public int quantity;
-        public int price;
+        string item;
+         int quantity;
+         int price;
+         int total_bill;
 
-        public void Accept(string sitem, int squantity, int sprice)
+        public void Accept(string item, int quantity, int price)
         {
-            item = sitem;
-            quantity = squantity;
-            price = sprice;
-            
-            if (quantity <= 0)
+            this.item = item;
+            this.quantity = quantity;
+            this.price = price;
+
+            if (this.quantity <= 0)
             {
-                Console.WriteLine("error"); 
-                
+                Console.WriteLine("error");
+
             }
-        }public void Getbill( ) 
+            else 
+            {
+                total_bill = this.Getbill();
+                this.Display();
+            }
+        }public int Getbill( ) 
         {
-            Console.WriteLine("Total:   "+price*quantity);
+             return price*quantity;
             
         }
-        public void summary()
+        public void Display()
         {
-            Console.WriteLine("Summary:" + "1.Item  " + item + "\n" + "        2.Quantity " + quantity + "\n" + "        3.Price " + price);
+            Console.WriteLine("item" + item);
+            Console.WriteLine("quantity"+ quantity);
+            Console.WriteLine("price"+ price);
+            Console.WriteLine("Total Bill"+total_bill);
+                
         }
         static void Main(string[] args)
         {
             Shopping obj = new Shopping();
-            obj.Accept("3", 6, 850);
-            obj.summary();
-            obj.Getbill();
+            obj.Accept("shirt", 6, 850);
+            obj.Display();
+            //obj.Getbill();
+            
 
         }
 

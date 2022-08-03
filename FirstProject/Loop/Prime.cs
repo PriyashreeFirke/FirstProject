@@ -23,11 +23,11 @@ namespace FirstProject.Loop
             {
 
 
-                Console.WriteLine("prime");
+                Console.WriteLine(" not prime");
             }
             else
             {
-                Console.WriteLine("not prime");
+                Console.WriteLine("prime");
             }
         }
     }
