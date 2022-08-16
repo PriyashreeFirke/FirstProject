@@ -3,7 +3,8 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-	  <StartupObject>FirstProject.Contentmentconstructor.Employee</StartupObject>
+    
+	  <StartupObject>FirstProject.exam6.Program</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>

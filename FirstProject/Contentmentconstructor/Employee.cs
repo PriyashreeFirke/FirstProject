@@ -36,7 +36,7 @@ namespace FirstProject.Contentmentconstructor
 
         void Display()
         {
-            Console.WriteLine(id+""+name+" "+salary+" "+dp);
+            Console.WriteLine(id+""+name+" "+salary);
             dp.show();
         }
         static void Main(string[] args)

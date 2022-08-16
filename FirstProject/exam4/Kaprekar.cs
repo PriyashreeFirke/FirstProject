@@ -23,39 +23,44 @@ namespace FirstProject.exam4
         public static bool IsKaprekar(int number)
         {
            
-            int square = 0;
-            int n = 0;
-            int countDigits = 0;
-            
-            int sum = 0;
+            int n = number;
+            int count = 0;
 
-           
-            square = number * number;
-
-            
-            n = square;
-            while (n!= 0)
+            while (n >0)
             {
-                countDigits++;
-                n = n / 10; 
+                count++;
+                n = n / 10;
+            }
+            number = n;
+            int sq = number * number;
+            int power = 1;
+
+
+            for (int i = 1; i <= count; i++)
+            {
+                power = power * 10;
+            }
+            int q = sq / power;
+            int r = sq % power;
+            int sum = q + r;
+            Console.WriteLine("sum="+sum);
+
+
+            if (sum == number)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
             }
 
-            
-            for (int i = countDigits - 1; i > 0; i--)
-            {
-               
-                
-               
-                if (sum == number)
-                {
-                    return true;
-                }
             }
-            return false;
+            
         }
 
     }
-}
+
     
     
 
