@@ -8,27 +8,22 @@ namespace FirstProject.exam6
     {
         static void Main(string[] args)
         {
-            int[] array = new int[] { 3, 0, 0, 1, 2, 0, 4, 0 };
-            int[] result = approach(array);
-
-        }
-        static int[]approach(int[] array)
-        {
-            for(int i=0; i<array.Length;i++)
+            int[] array = new int[] { 26, 0, 67,45, 0, 78, 54, 38,10,0,34 };
+                       for(int i=0;i<array.Length;i++)
             {
-                if (array[i] != 0)
-                    continue;
-                for (int j = i + 1; j < array.Length; j ++) 
-                {
-                    if (array[j] == 0)
-                        continue;
-                    array[i] = array[j];
-                    array[j] = 0;
-                    break;
-
-                }
+                Console.Write(array[i]);
             }
-            return array;
+            Console.WriteLine();
+            for(int j=0; j<array.Length;j++)
+            {
+                if (array[j] == 0)
+                {
+                   array[j] = 1;
+                  
+                }
+                Console.Write(array[j]);
+            }
+           
                
 
         }

@@ -14,16 +14,13 @@ namespace FirstProject.exam6
                 for (int i = 0; i < arr_size; i++)
                 {
 
-                    if ((arr[i] & 1) == 1)
-                        odd_count++;
-                    else
+                    if (arr[i]%2 == 0)
                         even_count++;
+                    else
+                        odd_count++;
                 }
 
-                Console.WriteLine("Number of even"
-                                  + " elements = " + even_count
-                                  + " Number of odd elements = "
-                                  + odd_count);
+                Console.WriteLine("Number of even"+ " elements = " + even_count+ " Number of odd elements = "+ odd_count);
             }
 
            

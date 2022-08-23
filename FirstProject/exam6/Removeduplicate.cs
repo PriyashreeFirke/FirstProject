@@ -6,30 +6,44 @@ namespace FirstProject.exam6
 {
     class Removeduplicate
     {
-
-
-        static void Main(string[] args)
+        static int removeDuplicates(int[] arr, int n)
         {
-            int i = 0, j = 0;
-            int[] arr1 = new int[] { 7, 7, 8, 8, 9, 1, 1, 4, 2, 2 };
-            for (i = 0; i < arr1.Length; i++)
-            {
-                for (j = 0; j < arr1.Length; j++)
-                {
-                    if (i == j)
-                        continue;
-                    if (arr1[j] == arr1[i])
-                        break;
-                }
-                if (arr1.Length == j)
-                {
-                    Console.Write(arr1[i] + " ");
-                }
-            }
+
+
+            if (n == 0 || n == 1)
+                return n;
+
+            int[] temp = new int[n];
+
+            int j = 0;
+
+            for (int i = 0; i < n - 1; i++)
+
+                if (arr[i] != arr[i + 1])
+                    temp[j++] = arr[i];
+
+
+            temp[j++] = arr[n - 1];
+
+            for (int i = 0; i < j; i++)
+                arr[i] = temp[i];
+
+            return j;
+        }
+        public static void Main()
+        {
+            int[] arr = { 1, 2, 2, 3, 4, 4, 4, 5, 5 };
+            int n = arr.Length;
+
+            n = removeDuplicates(arr, n);
+
+            for (int i = 0; i < n; i++)
+                Console.Write(arr[i] + " ");
         }
     }
 }
-       
-        
-    
+
+
+
+
 

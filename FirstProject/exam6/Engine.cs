@@ -4,67 +4,96 @@ using System.Text;
 
 namespace FirstProject.exam6
 {
-    class Engine
+    class Car
     {
         int id;
-        int lastcleandate;
+        string color;
+        Engine en;
         
-        public Engine(int id,int lastcleandate)
+
+        Car(int id, string color)
         {
-            this.id=id;
-            this.lastcleandate=lastcleandate;
+            this.id = id;
+            this.color = color;
         }
-        public void showEngine()
+        public void Show()
         {
-            Console.WriteLine(" "+id+" "+lastcleandate);
+            Console.WriteLine(" " + id + " " + color);
         }
-        class subengine
+
+        class Engine
         {
-            string subenginetype;
-            public subengine(string subenginetype)
+            int id;
+            int date;
+            Subengine se;
+
+            public Engine(int id, int date)
             {
-                this.subenginetype = subenginetype;
+                this.id = id;
+                this.date = date;
             }
-            public void showengine()
+            public void ShowEngine()
             {
-                Console.WriteLine(" "+subenginetype);
+                Console.WriteLine(" " + id + " " + date);
             }
-         class Gear
+
+            class Subengine
             {
-                string geartype;
-                public Gear(string geartype)
+                string type;
+                public Subengine(string type)
                 {
-                    this.geartype = geartype;
+                    this.type = type;
                 }
-                public void showgear()
+                public void Showsub()
                 {
-                    Console.WriteLine(" "+geartype);
+                    Console.WriteLine(" " + type + " ");
                 }
-          class Car
+                class Gear
                 {
-                    int id;
-                    string color;
-                    public Car(int id,string color)
+                    string type;
+                    public Gear(string type)
                     {
-                        this.id = id;
-                        this.color = color;
+                        this.type = type;
 
                     }
-                   public void Displaycall()
+                    public void Display()
                     {
-                        Console.WriteLine(id+" "+color);
+                        Console.WriteLine(" " + type + " ");
                     }
-                }
-                static void Main(string[] args)
-                {
-                    Engine e = new Engine(111, 23);
-                    subengine s = new subengine("petrol");
-                    Gear g = new Gear("auto");
-                    Car c = new Car(61, "White");
-                    c.Displaycall();
+
+                    static void Main(string[] args)
+                    {
+                        Engine e;
+                        Car c = new Car(101, "red");
+                        new Engine(121, 12 / 12 / 21);
+                        Subengine s = new Subengine("auto");
+
+                     
+                    }
                 }
             }
         }
-       
     }
 }
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
