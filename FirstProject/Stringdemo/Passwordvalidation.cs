@@ -44,7 +44,7 @@ namespace FirstProject.Stringdemo
                     Console.WriteLine(count2);
                     break;
                 }
-            }
+            } 
             if(count==1 &&count1==1&& count2==1)
             {
                 Console.WriteLine("valid");

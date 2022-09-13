@@ -12,8 +12,8 @@ namespace FirstProject.breakcontinue
             {
                 if (i == 3)
                 {
-                    // break;
-                    continue;
+                     break;
+                    //continue;
                 }
                 Console.WriteLine(i);
 
